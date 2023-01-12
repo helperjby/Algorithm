@@ -1,10 +1,8 @@
 def solution(rsp):
-    result = ''
-    for i in rsp:
-        if int(i) == 2:
-            result += str((int(i)-2))
-        elif int(i) == 0:
-            result += str((int(i)+5))
-        elif int(i) == 5:
-            result += str((int(i)-3))
-    return result
+    rsp =rsp.replace('2','s')
+    rsp =rsp.replace('5','p')
+    rsp =rsp.replace('0','r')
+    rsp =rsp.replace('r','5')
+    rsp =rsp.replace('s','0')
+    rsp =rsp.replace('p','2')
+    return rsp
